@@ -1,0 +1,15 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #2A2A2A;
+}
+
+body, input, button, textarea {
+    font: 600 18px Roboto, sans-serif;
+  }
