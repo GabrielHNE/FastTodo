@@ -1,4 +1,4 @@
-import React, { useState }from 'react';
+import React, { useState, useEffect }from 'react';
 
 import './styles/global.css';
 
@@ -9,24 +9,34 @@ import AddButton from './components/AddButton';
 
 function App() {
 
-  const [totalTodos, setTotalTodos] = useState(5);
+  const [todos, setTodos] = useState([
+    {status: 0, text: "Doing something nowww...", image: ''},
+    {status: 1, text: "Doing something nowww...", image: ''},
+    {status: 2, text: "Doing something nowww...", image: ''},
+    {status: 0, text: "Doing something nowww...", image: ''},
+  ]);
 
-  function createTodos(todos){
-    let todoList = [];
+  function addTodos(){
+    setTodos([...todos, {status: 0, text: "Doing something nowww...", image: ''}]);
+  }
 
-    for(let i=0; i < totalTodos; i++){
-      todoList.push(<Todo />);
-    }
+  function deleteTodo(){
 
-    return todoList.map(Todo => Todo);
   }
 
   return (
     <div className="App">
       <Header/>
 
-      {createTodos(totalTodos)}
-      <AddButton />
+      <Todo status={0} text={"hiiiiiii"} image={""}/>
+
+      {
+        todos.map((todo, i) =>{
+          return <Todo key={i} status={todo.status} text={todo.text} image={todo.image}/>
+        })
+      }
+
+      <AddButton onPress={addTodos} />
     </div>
   );
 }
