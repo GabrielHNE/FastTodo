@@ -1,6 +1,10 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState }from 'react';
+import { EditorState } from 'draft-js';
+import { Editor } from 'react-draft-wysiwyg';
 
 import './styles/global.css';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+
 
 //components
 import Header from './components/Header';
@@ -9,12 +13,17 @@ import AddButton from './components/AddButton';
 
 function App() {
 
-  const [todos, setTodos] = useState([
+  const [todos, setTodos] = React.useState([
     {status: 0, text: "Doing something nowww...", image: ''},
     {status: 1, text: "Doing something nowww...", image: ''},
     {status: 2, text: "Doing something nowww...", image: ''},
     {status: 0, text: "Doing something nowww...", image: ''},
   ]);
+
+  const [editorState, setEditorState] = React.useState(
+    () => EditorState.createEmpty(),
+  );
+
 
   function addTodos(){
     setTodos([...todos, {status: 0, text: "Doing something nowww...", image: ''}]);
@@ -28,7 +37,6 @@ function App() {
     <div className="App">
       <Header/>
 
-      <Todo status={0} text={"hiiiiiii"} image={""}/>
 
       {
         todos.map((todo, i) =>{
@@ -37,6 +45,7 @@ function App() {
       }
 
       <AddButton onPress={addTodos} />
+      
     </div>
   );
 }
