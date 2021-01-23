@@ -21,3 +21,12 @@
 .button img {
     color: #767676;
 }
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.button:focus {
+    border: none;
+}
