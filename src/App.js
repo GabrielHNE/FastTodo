@@ -1,6 +1,4 @@
 import React, { useState }from 'react';
-import { EditorState } from 'draft-js';
-import { Editor } from 'react-draft-wysiwyg';
 
 import './styles/global.css';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
@@ -13,16 +11,12 @@ import AddButton from './components/AddButton';
 
 function App() {
 
-  const [todos, setTodos] = React.useState([
+  const [todos, setTodos] = useState([
     {status: 0, text: "Doing something nowww...", image: ''}
   ]);
 
   function addTodos(){
     setTodos([...todos, {status: 0, text: "Doing something nowww...", image: ''}]);
-  }
-
-  function deleteTodo(){
-
   }
 
   return (

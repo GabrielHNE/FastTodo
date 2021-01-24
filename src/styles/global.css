@@ -20,6 +20,14 @@ body, input, button, textarea {
     align-items: center;
     position: relative;
 }
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+select { /* 1 */
+    text-transform: none;
+}
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
