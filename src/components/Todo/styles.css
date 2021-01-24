@@ -1,18 +1,16 @@
 .todo-field {
     display: flex;
+    position: relative;
     flex-direction: row;
-    width: 300px;
-    min-height: 60px;
-    background: #292929;
-
+    width: 350px;
+    min-height: 40px;
     margin-bottom: 10px;
-
+    background: #292929;
     align-items: flex-start;
-    /* justify-content: space-between; */
-
     padding: 8px;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
 .todo-field:hover {
@@ -26,56 +24,52 @@
     color: white;
     
     min-height: 32px;
-    min-width: 32px;
+    width: 32px;
     
     margin-right: 8px;
     background: #2A2A2A;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
 }
 
 .check-box:hover{ 
     cursor: pointer;
 }
 
-.input-box{
-    width:100%;
-    position: relative;
-    background: pink;
-    color: white;
-    font-size: 1rem;
-    text-align: left;
-}
-
-.input-box > span {
-    color: red;
-}
-
 .wrapper-class {
-    width: 100% !important;
+    width: 310px !important;
     display: block !important;
-    padding: 2px;
+    align-self: right !important;
+    padding: 0px;
     position: relative;
-    width: 100%;
 }
 
 .toolbar-class-absolute {
     position: absolute !important;
-    background: #292929;
+    background: #505050;
     color: black;
-    top: -80px;
+    top: -50px;
     font-size: 10px;
-    width: 200px;
+    z-index: 999;
+    border: none;
+    border-radius: 4px;
 }
 
 .editor-class {
-    max-width: 90% !important;
-    background-color:#383838;
-    padding: 0.7rem;
-    color: white;
     font-family: 'Roboto', sans-serif;
+    max-width: 100% !important;
+    background-color:  #292929;
+    padding: 5px;
+    overflow-x: hidden;
+    color: white;
+    scrollbar-width: 2px;
+    scrollbar-color: grey;
     font-weight: 400;
     font-size: 14px;
+    min-height: 32px;
 }
 
+/* This class puts a margin on the top of some div making the text go down */
+.public-DraftStyleDefault-block {
+    margin: 0 !important;
+}

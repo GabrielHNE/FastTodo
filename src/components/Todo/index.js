@@ -18,12 +18,15 @@ const STATES = [
     Times
 ]
 
-const toolbarConfig = {
-    options: ['inline','emoji', 'image'],
-    inline: { options:['bold','italic', 'underline', 'strikethrough'], inDropdown: false },
+const TOOLBAR_CONFIG = {
+    options: ['inline', 'image', 'emoji'],
+    inline: { 
+        options:['bold','italic', 'underline', 'strikethrough'], 
+        inDropdown: false 
+    }
 }
 
-export default function Todo( {status, text, image} ){
+export default function Todo( {status, text, image, deleted} ){
     
     const [editorState, setEditorState] = React.useState(
         () => EditorState.createEmpty(),
@@ -32,10 +35,9 @@ export default function Todo( {status, text, image} ){
     const [click, setClick] = React.useState(status);
 
     return(
-        <article className='todo-field'>
+        <article className= { !deleted?'todo-field' : "'todo-field' 'deleted'"}>
             <div className='check-box noselect' onClick={()=>{
                 setClick((click + 1)%4);
-                console.log(click);
             }}>
                 { click !== 0 ?
                     <img src={STATES[click]} width="24px" alt="state" draggable="false" />
@@ -53,7 +55,7 @@ export default function Todo( {status, text, image} ){
                     editorClassName="editor-class"
                     toolbarClassName="toolbar-class-absolute"
                     placeholder="Start a new ToDo..."
-                    toolbar={toolbarConfig}
+                    toolbar={TOOLBAR_CONFIG}
                 />
             {/* </div> */}
 
