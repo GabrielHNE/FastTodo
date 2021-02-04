@@ -6,10 +6,13 @@ import {
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import './styles.css';
 
-import Check from '../../assets/status/check-solid.svg';
-import Clock from '../../assets/status/clock-regular.svg';
-import Times from '../../assets/status/times-solid.svg';
+// import Check from '../../assets/status/check-solid.svg';
+// import Clock from '../../assets/status/clock-regular.svg';
+// import Times from '../../assets/status/times-solid.svg';
 
+import Check from 'http://localhost:8080/static/media/check-solid.c1e3925f.svg';
+import Clock from 'http://localhost:8080/static/media/clock-regular.1773e24d.svg';
+import Times from 'http://localhost:8080/static/media/times-solid.e5626bae.svg';
 
 const STATES = [
     '',
