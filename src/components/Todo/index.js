@@ -32,7 +32,7 @@ const TOOLBAR_CONFIG = {
 export default function Todo( {status, text, image, deleted} ){
     
     const [editorState, setEditorState] = React.useState(
-        () => EditorState.createEmpty(),
+        () => EditorState.createEmpty()
     );
 
     const [click, setClick] = React.useState(status);
