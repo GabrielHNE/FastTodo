@@ -19,7 +19,7 @@
   </a>
 </p>
 
-# :check: Fast To-Do
+# Fast To-Do
 
 FastToDo is the easiest way to start a to-do list. It intends to be fast, straightforward and all simple. Doesn't require login. Just start your to-do list. You can add a task as a text or as an image.
 
